@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Sentiment = ({data}) => {
-    let color = data.data != 0 ? "success" : "danger"
+    let color = data.prediction != 0 ? "success" : "danger"
     return (
         <div className="container justify-content-center mt-2">
             <h3 className="text-center">
@@ -11,7 +11,7 @@ const Sentiment = ({data}) => {
             <h3 className={`text-center mt-3`}>
                 {"data: "}
                 <span className={`text-${color}`}>
-                    {data.data == 0 ? "REKT": "YEET"}
+                    {data.prediction != 0 ? "YEET": "REKT"}
                 </span>
             </h3>
         </div>

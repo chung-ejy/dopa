@@ -4,7 +4,6 @@ import DataState from "./context/data/dataState"
 import Header from "./components/layout/Header"
 import Data from "./components/pages/data"
 import Alert from './components/alerts/Alert'
-import Sentiment from './components/sentiment/Sentiment'
 export const App = () => {
     return (
         <DataState>

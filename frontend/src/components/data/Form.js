@@ -4,23 +4,15 @@ import DataContext from '../../context/data/dataContext'
 const Form = ({data}) => {
     const dataContext = useContext(DataContext)
     const {getData} = dataContext
-    const [state,setState] = useState({"FirstBlood":true,"FirstTower":true,"FirstBaron":true,"FirstDragon":true,"FirstInhibitor":true,"tier":"gm","side":1})
+    const [state,setState] = useState({"FirstBlood":false,"FirstTower":false,"FirstBaron":false,"FirstDragon":false,"FirstInhibitor":false,"tier":"gm","side":1})
     const onChange = (e) => {
-        if (e.target.name === "side"){
             setState({...state,[e.target.name]:e.target.checked});
-        } else {
-            if (e.target.name === "tier") {
-                setState({...state,[e.target.name]:e.target.checked});
-            } else {
-                setState({...state,[e.target.name]:e.target.checked});
-            }
-            
         } 
-    }
 
     const onSubmit = (e) => {
+        e.preventDefault()
         getData(state)
-        setState({"FirstBlood":true,"FirstTower":true,"FirstBaron":true,"FirstDragon":true,"FirstInhibitor":true,"tier":"gm","side":"blue"})
+        setState({"FirstBlood":false,"FirstTower":false,"FirstBaron":false,"FirstDragon":false,"FirstInhibitor":false,"tier":"gm","side":"blue"})
     }
     return (
         <div className="card card-body mt-4 mb-4">

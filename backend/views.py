@@ -16,7 +16,6 @@ def backendView(request):
         info["tier"] = "gm" if info["side"] else "m"
         client = MongoClient("localhost",27017)
         db = client["dopa"]
-        print(info)
         table = db["models"]
         data = table.find(show_record_id=False)
         models =  pd.DataFrame(list(data))
