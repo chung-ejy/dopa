@@ -24,7 +24,7 @@ const Data = () => {
                             <i className="fas fa-spinner text-primary fa-7x"></i>
                         </h3>
                         <h3 className="text-center mt-3">
-                            {"data: ???"}
+                            {"???"}
                         </h3>
                     </div>) : (
                         <Fragment>

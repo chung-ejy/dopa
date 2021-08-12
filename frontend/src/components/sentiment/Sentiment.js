@@ -9,7 +9,7 @@ const Sentiment = ({data}) => {
                 } text-${color} fa-7x`} />
             </h3>
             <h3 className={`text-center mt-3`}>
-                {"data: "}
+                {"Match Result: "}
                 <span className={`text-${color}`}>
                     {data.prediction != 0 ? "YEET": "REKT"}
                 </span>

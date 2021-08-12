@@ -26,7 +26,8 @@ def backendView(request):
         for factor in factors:
             plz[factor] = info[factor]
         complete["prediction"] = int(m.predict(pd.DataFrame([plz])))
-        print(complete)
+        info["side"] = "blue" if info["side"] == 1 else "red"
+        info["tier"] = "grandmaster" if info["side"] == "gm" else "challenger"
     except Exception as e:
         complete = info
         complete["prediction"] = "not found"
